@@ -1,0 +1,78 @@
+
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"
+<!DOCTYPE  html>
+<html>
+  <head>
+    <title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    	.btn{
+		background-color: #ddd;
+  		border: none;
+  		color: black;
+  		padding: 8px 8px;
+ 		text-align: center;
+  		font-size: 12px;
+ 		margin: 4px 2px;
+  		transition: 0.3s;
+			}
+
+		.btn:hover {
+  		background-color: #48e1;
+  		color: white;
+		}
+	</style>
+	
+
+
+    
+  </head>
+  
+
+  <!-- <body style="background-image:  url('https://www.freepnglogos.com/uploads/free-vector-ford-logo-25.png')";background-repeat:'no-repeat';> -->
+  <body style="background-color:white;">
+  	<center>
+  		<img class ="img-fluid" src="https://www.freepnglogos.com/uploads/free-vector-ford-logo-25.png" alt="icon"   >
+  	</center>
+  	<div class="header">
+  <a href="#default" class="logo">CompanyLogo</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+
+
+
+
+	<<div class="container" style="margin:0 auto" align=center> -->
+ 	 <h1>HOME PAGE</h1> 
+ 	 
+	</div>
+    <div class="jumbotron text-center" style="margin:0 auto" align=center>
+      <h2>WELCOME</h2>
+      <br>
+      <form action="http://localhost:5000/" method="post">
+        <input type="text" placeholder=" enter your PR Number" name="PRnum" value="{{
+          request.form.PRnum }}">
+         
+  		
+        <input class="btn btn-default" type="submit" value="submit">
+        <INPUT TYPE="hidden" NAME="redirect" VALUE="simple.html">
+        <div class="container" >
+    		<button type="button" class="cancelbtn">Cancel</button>
+    		
+  		</div>
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+
+  <!--  <footer style="margin-top: 50px; display: flex; justify-content:center; border: 2px solid gray;">
+    	<img src="{{url_for('static', filename='download.jpeg') }}">
+	</footer> -->
+</html>
+{% endblock %}
