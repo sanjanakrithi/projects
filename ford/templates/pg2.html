@@ -13,8 +13,9 @@
         background-color: white;
          padding: 15px;
           text-align: left;
-          font-size: 35px;
+          font-size: 25px;
           color: white;
+          
         }
      /* body,html {
       background-image: url('https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/campaigns/2019/bfp/BFP_Billboard_Desktop_Edge_2160x945.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg');
@@ -65,7 +66,7 @@
           font-size: 17px;
           width: 25%;
           }
-       /*   .container {
+            /*   .container {
             position: fixed;
             width: 340px;
             height: 280px;
@@ -87,9 +88,9 @@
 .container .content {
   position: relative; /* Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(214,234,248); /* Fallback color */
-   /* Black background with 0.5 opacity */
-  color: #5DADE2; /* Grey text */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
   width: 100%; /* Full width */
   padding: 20px; /* Some padding */
 }
@@ -145,44 +146,26 @@
 
     </header>
      </head>
-     <body>
+    
     <div class="container" align=center>
-      <div class="bg-text">
+      
         <div class="bg-image"></div>
    
-      <table border = "2" class="table" align="center">
-         <tr>
-            <th>Variable</th>
-            <th>XML file</th>
-         </tr>
-    
-          
-         <tr>
-            
-            <td>input</td>
-            <td><p><a href="http://localhost:5000/contact">XML1</a> </p></td>
-              
-         </tr>
-         
-         <tr>
-            <td>Var 2</td>
-            <td><p><a href="https://">XML2</a> </p></td>
-         </tr>
-          <tr>
-            <td>Var 3</td>
-            <td><p><a href="https://">XML3</a> </p></td>
-         </tr>
-          <tr>
-            <td>Var4</td>
-            <td><p><a href="https://">XML4</a> </p></td>
-         </tr>
-      </table>
+      <table border = "2" class="table" >
+      
+<thead><tr><th>variable</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>input</td><td><a href="http://localhost:5000/contact">XML1</a></td></tr>
+<tr><td>Var2</td><td><a href="https://">XML2</a></td></tr>
+<tr><td>Var3</td><td><a href="https://">XML2</a></td></tr>
+<tr><td>Var4</td><td><a href="https://">XML2</a></td></tr>
+</tbody>
+</table>
+      
     </div>
   </div>
 
-  
-  </body>
-  
+ 
 
 </html>
 {% endblock %}

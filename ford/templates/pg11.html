@@ -1,0 +1,222 @@
+
+
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"
+<!DOCTYPE  html>
+<html>
+  <head>
+    <title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+      header {
+        background-color: white;
+         padding: 5px 16px;
+          text-align: left;
+          font-size: 35px;
+          color: white;
+
+        }
+      body,html {
+      background-image: url('https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/campaigns/2019/bfp/BFP_Billboard_Desktop_Edge_2160x945.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg');
+      background-position: 0px 85px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+      {
+        box-sizing: border-box;
+        }
+    	.btn{
+		  background-color: #ddd;
+  		border: none;
+  		color: black;
+  		padding: 8px 8px;
+ 		  text-align: center;
+       text-decoration: none;
+  		font-size: 12px;
+ 		  margin: 4px 2px;
+  		transition: 0.3s;
+			}
+
+		.btn:hover {
+  		background-color: #48e1;
+  		color: white;
+		  }
+      
+
+      .header h1 {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        }
+      .bg-image {
+  /* The image used */
+         background-image: url("https://www.ford.com/cmslibs/content/dam/brand_ford/en_us/brand/campaigns/2019/bfp/BFP_Billboard_Desktop_Edge_2160x945.jpg/_jcr_content/renditions/cq5dam.web.1440.1440.jpeg");
+         height:auto;
+         opcity:0.3;
+  /* Add the blur effect */
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+
+  /* Full height */
+        height: 100%; 
+
+  /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+
+        .tablink {
+          background-color: #555;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 17px;
+          width: 25%;
+          }
+          div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  font-weight: bold;
+  color: #000000;
+  position: right/* For IE8 and earlier */
+}
+       /*   .container {
+            position: float;
+            width: 340px;
+            height: 280px;
+            top: 50%;
+            left: 50%;
+            margin-top: -140px;
+            margin-left: -170px;
+            background: #fff;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .1);}*/
+            .container {
+  vertical-align: right; 
+  /*max-width: 800px;  Maximum width */
+  /*margin: 0 auto; /* Center it */*/
+}
+.container img {vertical-align: right;}
+
+.container .content {
+  position: right; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
+.button {
+  float: right;
+  border: 1px solid green;
+}
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+/*.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline;
+    padding:10px;
+}*/
+/*.nav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}*/
+
+
+	</style>
+  <header align=center >
+    <img class ="img-fluid" src="https://www.freepnglogos.com/uploads/free-vector-ford-logo-25.png" alt="icon" width=200 height=100> 
+      <font size="5">
+        
+
+      <a class="active" href="http://localhost:5000/home">Vehicles</a>
+      <a href="http://localhost:5000/home">Shop</a>
+      <a href="http://localhost:5000/home">Finance</a>
+      <!-- <i class="fas fa-map-marker" style="float:left ,font-size:48px; color:blue"></i> -->
+      <a href="http://localhost:5000/home">Contact</a>
+    
+    </font>
+
+
+    </header>
+
+
+  <body >
+
+  	<div class="header">
+    
+    </div>
+  </body>
+
+
+
+<section>
+
+	<div class="container" style="margin:0 auto" align=right> 
+	<P align=right></P>
+ 	
+	</div>
+   <!-- +++ -->
+  <!--  <div class="transbox" style="width:500px" > -->
+    
+    <div class="login-box" style="margin:0 " >
+      <!-- <h2>HOME PAGE</h2> -->
+      <br>
+       <div class="container" align="right">
+        <div class="text-block">
+          <div class="transbox" align="right">
+            <p>
+              <P>
+          <div style="text-align:center; margin:200px auto 200px auto;">
+            <div id="p">
+            <form action="http://localhost:5000/" method="post">
+
+        <!-- <input type="text" placeholder=" Enter your PR Number" name="PRnum" value="{{request.form.PRnum }} " > -->
+        <input type="text" placeholder=" Enter your PR Number" name="PRnum" value="{{
+          request.form.PRnum }}">
+         
+
+         
+  		   
+
+
+        <input class="btn btn-default" type="submit" value="submit"  width="48" height="48" style="font-weight: bold" />
+        <INPUT TYPE="hidden" NAME="redirect" VALUE="simple.html"  width="48" height="48">
+       <!--  <div class="container" > -->
+    		<input class="btn btn-default" type="submit" value="cancel"  width="48" height="48" style="font-weight: bold"/>
+        <INPUT TYPE="hidden" NAME="redirect" VALUE="simple.html"  width="48" height="48">
+    		</P>
+  		</div>
+    </div>
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  
+  </section>
+</p>
+
+
+</html>
+{% endblock %}

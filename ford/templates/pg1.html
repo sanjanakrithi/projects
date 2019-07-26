@@ -1,4 +1,5 @@
 
+
 {% extends "bootstrap/base.html" %}
 {% block html_attribs %} lang="en"
 <!DOCTYPE  html>
@@ -9,11 +10,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
-      header {
-        background-color: white;
-         padding: 15px;
+      .header {
+        background-color: hidden;
+         padding: 12px;
           text-align: left;
-          font-size: 35px;
+          font-size: 25px;
           color: white;
         }
      /* body,html {
@@ -30,22 +31,22 @@
       {
         box-sizing: border-box;
         }
-      .btn{
-      background-color: #ddd;
-      border: none;
-      color: black;
-      padding: 8px 8px;
-      text-align: center;
+    	.btn{
+		  background-color: #ddd;
+  		border: none;
+  		color: black;
+  		padding: 8px 8px;
+ 		  text-align: center;
        text-decoration: none;
-      font-size: 12px;
-      margin: 4px 2px;
-      transition: 0.3s;
-      }
+  		font-size: 12px;
+ 		  margin: 4px 2px;
+  		transition: 0.3s;
+			}
 
-    .btn:hover {
-      background-color: #48e1;
-      color: white;
-      }
+		.btn:hover {
+  		background-color: #48e1;
+  		color: white;
+		  }
       
 
       .header h1 {
@@ -53,9 +54,12 @@
         top: 10px;
         left: 10px;
         }
+        .header-left {
+    float: none;
+  }
       
         .tablink {
-          background-color: #555;
+          background-color: #D6EAF8  ;
           color: white;
           float: left;
           border: none;
@@ -87,9 +91,9 @@
 .container .content {
   position: relative; /* Position the background text */
   bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
+  background: rgb(214,234,248); /* Fallback color */
+   /* Black background with 0.5 opacity */
+  color: #5DADE2; /* Grey text */
   width: 100%; /* Full width */
   padding: 20px; /* Some padding */
 }
@@ -130,47 +134,57 @@
 }
 
 
-  </style>
-  <header >
-    <img class ="img-fluid" src="https://www.freepnglogos.com/uploads/free-vector-ford-logo-25.png" alt="icon" width=200 height=100> 
-      <font size="5">
 
     
-      
-      <a class="active" href="http://localhost:5000/home">Vehicles</a>
-      <a href="http://localhost:5000/home">Shop</a>
-      <a href="http://localhost:5000/home">Finance</a>
-      <a href="http://localhost:5000/home">Contact</a>
-    </font>
-
-    </header>
-     </head>
-  <body>
-    <div class="container" align=center>
-      <div class="bg-text">
-        <div class="bg-image"></div>
-    
-  <table border = "1" class="table" align="center">
-  <thead>
-    <tr style="text-align: center;">
-
-  <thead>
-    <tr style="text-align: right;">
-      
-      <td>input</td>
-      <td>in_status</td>
-      <td>Current User</td>
-      <td>Process Title</td>
-    </tr>
-    <tr>
-      
-      <td>null</td>
-      <td>anonymous</td>
-      <td>true</td>
-      <td>NaN</td>
-      </tbody>
-    </table>
-
+  </head>
   
+
+  <!-- <body style="background-image:  url('https://www.freepnglogos.com/uploads/free-vector-ford-logo-25.png')";background-repeat:'no-repeat';> -->
+  <body style="background-color:white;">
+  	<center>
+  		<img class ="img-fluid" src="https://www.freepnglogos.com/uploads/free-vector-ford-logo-25.png" alt="icon"   >
+  	</center>
+  	<div class="header">
+  <a href="#default" class="logo">CompanyLogo</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <div class="header-left">
+    <a class="active" href="#home">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+
+
+
+
+	<<div class="container" style="margin:0 auto" align=center> -->
+ 	 <h1>HOME PAGE</h1> 
+ 	 
+	</div>
+    <div class="jumbotron text-center" style="margin:0 auto" align=center>
+      <h2>WELCOME</h2>
+      <br>
+      <form action="http://localhost:5000/" method="post">
+        <input type="text" placeholder=" enter your PR Number" name="PRnum" value="{{
+          request.form.PRnum }}">
+         
+  		
+        <input class="btn btn-default" type="submit" value="submit">
+        <INPUT TYPE="hidden" NAME="redirect" VALUE="simple.html">
+        <div class="container" >
+    		<button type="button" class="cancelbtn">Cancel</button>
+    		
+  		</div>
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+
+  <!--  <footer style="margin-top: 50px; display: flex; justify-content:center; border: 2px solid gray;">
+    	<img src="{{url_for('static', filename='download.jpeg') }}">
+	</footer> -->
 </html>
 {% endblock %}
